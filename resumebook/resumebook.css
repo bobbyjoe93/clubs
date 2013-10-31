@@ -1,0 +1,92 @@
+/* CSS declarations go here */
+
+body {
+	height: 100%;
+	background-color: #69D2E7;
+}
+
+/*.main-point1 {
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	margin: 0px 0px 0px 0px;
+}*/
+/*.main-point2 {
+	background-color: #A7DBD8;
+	height: 300px;
+	width: 100%;
+}
+.main-point3 {
+	background-color: #E0E4CC;
+	height: 300px;
+	width: 100%;
+}
+.main-point4 {
+	background-color: #F38630;
+	height: 300px;
+	width: 100%;
+}
+.main-point5 {
+	background-color: #DA6900;
+	height: 300px;
+	width: 100%;
+}*/
+#email {
+	width: 442px;
+	height: 39px;
+	border: 0;
+	font-size: 20px;
+	border-radius: 2px;
+	background-color: rgba(216,223,232, 0.8);
+}
+
+.content-form {
+	border-radius: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+	opacity: 0.9;
+	/*height: 800px;*/
+	padding: 5% 5% 5% 5%;
+	text-align: center;
+	width: 500px;
+}
+
+.form_inline {
+	display: inline-block;
+	float: left;
+	text-align: left;
+	margin-top: 0;
+	width: 700px;
+	margin: auto;
+}
+
+.content {
+	background-color: white;
+	opacity: 0.8;
+	border-radius: 20px;
+
+	font-family: 'Libre Baskerville', serif;
+	position: relative;
+	width: 550px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 150px;
+
+	padding: 30px;
+	text-align: center;
+}
+
+form {
+	display: block;
+}
+
+.submit {
+	background-color: #39c;
+	color: #fff;
+	height: 39px;
+	width: 250px;
+	border: none;
+	border-radius: 2px;
+	margin-top: 10px;
+}

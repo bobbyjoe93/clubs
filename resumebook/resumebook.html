@@ -1,0 +1,142 @@
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
+	<script src="https://ucarecdn.com/widget/0.13.1/uploadcare/uploadcare-0.13.1.min.js" charset="utf-8"></script>
+
+	<script>UPLOADCARE_PUBLIC_KEY = "demopublickey";</script>
+
+	<title>ResumeBook</title>
+</head>
+
+<body>
+	<div class="navbar-wrapper">
+		<div class="navbar navbar-inverse">
+			<div class="navbar-inner">
+				<a class="brand" href="/">RCSA Resumebook</a>
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li class="active"><a href="/">Home</a></li>
+						<li><a href="/about">About</a></li>
+						<li><a href="/contact">Contact</a>
+						<li><a href="/students">Students</a></li>
+						<li><a href="/admin">Admin</li></a>
+						<li style="float: right; margin-top:10px;">{{loginButtons align="right"}}</li>
+					</ul>
+				</div>
+			</div>
+		</div> 
+	</div>
+
+	{{renderPage}}
+
+
+</body>
+
+<template name="Admin">
+	<div class="container content">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Grad Year</th>
+					<th>Major(s)</th>
+					<th>Resume URL</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each profiles}}
+				<tr>
+					<td>{{first_name_key}}</td>
+					<td>{{last_name_key}}</td>
+					<td>{{grad_year_key}}</td>
+					<td>{{majors_key}}</td>
+					<td>{{resume_key}}</td>
+				</tr>
+				{{/each}}
+			</tbody>
+		</table>
+	</div>
+</template>
+
+<template name="Students">
+	<div class="container">
+		<!-- <div class="content-form"> -->
+<iframe id="JotFormIFrame" onload="window.parent.scrollTo(0,0)" allowtransparency="true" src="http://form.jotform.us/form/32911890151148" frameborder="0" style="width:70%; height:1153px; border:none; border-radius:10px;" scrolling="no"></iframe>
+<script type="text/javascript">window.handleIFrameMessage = function(e) {var args = e.data.split(":");var iframe = document.getElementById("JotFormIFrame");if (!iframe)return;switch (args[0]) {case "scrollIntoView":iframe.scrollIntoView();break;case "setHeight":iframe.style.height = args[1] + "px";break;}};if (window.addEventListener) {window.addEventListener("message", handleIFrameMessage, false);} else if (window.attachEvent) {window.attachEvent("onmessage", handleIFrameMessage);}</script>
+			<!-- <h1>Your Profile</h1>
+			<form class="form-horizontal" role="form">
+			  	
+  			    <label for="first-name">First Name</label>
+			    <input type="text" class="form-control" id="first-name" placeholder="Billy">
+	  		
+	  			<label for="last-name">Last Name</label>
+			    <input type="text" class="form-control" id="last-name" placeholder="Bob">
+	  	
+	  			<label for="grad-year">Graduation Year</label>
+			    <input type="year" class="form-control" id="grad-year" placeholder="2015">
+	  			
+	  			<label for="major">Area of Study</label>	
+	  			<select multiple class="form-control" id="major" size=10>
+				  <option>Arts and Entertainment</option>
+				  <option>Business</option>
+				  <option>Communications</option>
+				  <option>Eduation</option>
+				  <option>EECS</option>
+				  <option>Environment</option>
+				  <option>Government</option>
+				  <option>Health and Medicine</option>
+				  <option>International</option>
+				  <option>Law and Public Policy</option>
+				  <option>Non-Profit</option>
+				  <option>Sciences - Biological</option>
+				  <option>Sciences - Physical</option>
+				</select>
+
+				<br><br>
+				<label for="upload">Upload Resume</label> -->
+				<!-- <input type="hidden" role="uploadcare-uploader" name="my_file" />
+
+				<input style="padding-left: 50px; margin-left: 30px;" type="file" id="resume">
+
+				<br><br>
+				<button type="submit" class="submit">Submit</button>
+
+			</form>
+		</div> -->
+	</div>
+</template>
+
+<template name="About">
+	<div class="content">
+		About <br>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras venenatis, elit ut tincidunt porta, mauris felis tempus urna, ut ultrices lectus lacus vitae lectus. Quisque lacinia sagittis ultrices. Aliquam eu placerat mauris, nec dictum dolor. Maecenas aliquam, ipsum in mattis vehicula, odio ante molestie arcu, eu iaculis elit sapien id turpis. Nullam nunc eros, fringilla elementum sagittis at, egestas ut dolor. Morbi at nibh porttitor, viverra arcu quis, vulputate sem. Vestibulum luctus dolor turpis, nec iaculis libero rhoncus eu. Nunc vehicula nisl eget metus molestie hendrerit.
+	</div>
+</template>
+
+<template name="Contact">
+	<div class="content">
+		Contact <br>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras venenatis, elit ut tincidunt porta, mauris felis tempus urna, ut ultrices lectus lacus vitae lectus. Quisque lacinia sagittis ultrices. Aliquam eu placerat mauris, nec dictum dolor. Maecenas aliquam, ipsum in mattis vehicula, odio ante molestie arcu, eu iaculis elit sapien id turpis. Nullam nunc eros, fringilla elementum sagittis at, egestas ut dolor. Morbi at nibh porttitor, viverra arcu quis, vulputate sem. Vestibulum luctus dolor turpis, nec iaculis libero rhoncus eu. Nunc vehicula nisl eget metus molestie hendrerit.
+	</div>
+</template>
+
+<template name="EmailForm">
+	 <div class="content">
+		<h1>RSVP to our Career Reception</h1>
+		<p>Leave us your email, and we will let you know how you can get access to our resume book!</p>
+		<form>
+			<input id="email">
+			<button type="submit" class="submit" >Submit</button>
+		</form>
+	</div>
+</template>
+
+<template name="Recruit">
+	<div class="container content">
+		<a href="https://gumroad.com/l/LiCE">Career Reception &amp; Resume Book 2013</a> <br>
+		<a href="https://gumroad.com/l/CcANH">Resume Book 2013</a>
+	</div>
+</template>
+
+
+
